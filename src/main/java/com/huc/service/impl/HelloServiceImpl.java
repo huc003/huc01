@@ -1,5 +1,7 @@
 package com.huc.service.impl;
 
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import com.huc.dao.HelloDao;
@@ -13,9 +15,8 @@ public class HelloServiceImpl implements HelloService {
 	@Resource
 	private HelloDao helloDao;
 
-	public String test() {
-		System.out.println(helloDao.test());
-		return "asdasda";
+	public Map<String, Object> test() {
+		return helloDao.test();
 	}
     
 }
